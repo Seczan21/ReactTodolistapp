@@ -12,10 +12,10 @@ const Todo  = ({todo,removeTodo,handleChange}) =>{
     <div>
         <input type="checkbox"  style={{margin:"0 10px"}} checked={todo.done} onChange={()=>{handleCheckboxChange(todo.id)}}/>
         <span style={todo.done?{textDecoration:"line-through"}:null}>{todo.title}</span>
-        <span style={{position:"fixed", right:20, padding:"0 10px"}}>
-            <button onClick={()=>{removeTodo(todo.id) (emitter.emit("NOTIFICATION",`"${todo.title}" Sukses Menghapus!`))}}>Delete</button>
+        <span style={{position:"fixed", right:20, padding:"0 10px"}} >
+            <button className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-full text-white p-2 " onClick={()=>{removeTodo(todo.id) (emitter.emit("NOTIFICATION",`"${todo.title}" Sukses Menghapus!`))}}>Delete</button>
         </span>
-        <hr />
+        <hr className='mb-5'/>
     </div>
   )
 }

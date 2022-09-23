@@ -9,7 +9,7 @@ const Notification = () => {
   const [message, setMessage] = useState();
   const notificationStyle = {
     padding: 10,
-    border: "1px green solid",
+    border: "1px white solid",
     marginBottom: 15,
     backgroundColor: "aqua",
     borderRadius: 2,
@@ -30,7 +30,7 @@ const Notification = () => {
     return null;
   }
   return (
-    <div style={notificationStyle}>
+    <div style={notificationStyle} >
       <span>{message}</span>
     </div>
   );

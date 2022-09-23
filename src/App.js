@@ -1,10 +1,8 @@
 import TodoContainer from './container/todoContainer';
-
+import '../src/index.css';
 function App() {
   return (
-    <div className="App" >
-     <h1 align="center">TODO LIST</h1>
-     
+    <div className="App" >   
      <TodoContainer></TodoContainer>
      
     </div>
