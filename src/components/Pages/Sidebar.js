@@ -1,48 +1,24 @@
 import React from 'react'
-import { NavLink} from 'react-router-dom'
-import { SideBarAbout, SidebarData } from '../Data/SideBarData'
+import { Link, NavLink, Route, Routes } from 'react-router-dom'
+import AboutSide from './AboutSide'
 
 const Sidebar = () => {
-    const activeLink = 'hover:bg-red-500 mt-7 pl-7 w-full h-14 flex justify-start items-center text-white text-2xl space-x-1 font-bold bg-red-500'
-    const normalLink = 'hover:bg-red-500 pl-7 mt-7 w-full h-14 flex justify-start items-center text-white text-2xl space-x-1 font-bold'
   return (
-    <div>
-        <React.Fragment>
-            <section>
-                <div className="text-white">
-                    {
-                        SidebarData.map((item, index)=>{
-                            return(
-                                <div className="" key={index}>
-                                    <NavLink to={item.path} className={({ isActive }) =>
-                                         isActive ? activeLink: normalLink}>
-                                        <span>{item.icon}</span>
-                                        <span>{item.title}</span>
-                                    </NavLink>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div className="">
-                {
-                        SideBarAbout.map((item, index)=>{
-                            return(
-                                <div className="" key={index}>
-                                    <NavLink to={item.path} className={({ isActive }) =>
-                                         isActive ? activeLink : normalLink}>
-                                        <span>{item.icon}</span>
-                                        <span>{item.title}</span>
-
-                                    </NavLink>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </section>
-        </React.Fragment>
-    </div>
+    <>
+    <nav>
+      <ul>
+        <li><Link to="/" className='hover:bg-red-500 mt-7 pl-7 w-full h-14 flex justify-start items-center text-white text-2xl space-x-1 font-bold bg-slate-500'>Home</Link></li>
+        <li>
+          <NavLink to="/about" className='hover:bg-red-500 mt-7 pl-7 w-full h-14 flex justify-start items-center text-white text-2xl space-x-1 font-bold bg-slate-500'>About</NavLink>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+    <Routes>
+      <Route path='about/*' element={<AboutSide/>} className='text-white' />
+    </Routes>
+    </nav>
+    </>
   )
 }
 

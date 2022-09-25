@@ -6,10 +6,10 @@ const Navbar = () => {
     <>
         <div className="bg-slate-500 text-black h-20 w-full flex items-center cursor-pointer">
             <div className="">
-                <BsBook className="text-white text-4xl"/>
+                <BsBook className="text-white text-4xl ml-8"/>
             </div>
             <div className="">
-                <p className="text-white text-3xl">My TodoList</p>
+                <p className="text-white text-3xl pl-3">TO-DO</p>
             </div>
         </div>
     </>

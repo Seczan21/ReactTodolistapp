@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import TodoContainer from '../../container/todoContainer/index.js'
 import AboutApp from './AboutApp.js'
 import AboutAuthor from './AboutAuthor.js'
+import NotFound from './NotFound.js'
 const NavPage = () => {
   return (
    <>
@@ -14,12 +15,13 @@ const NavPage = () => {
          <Routes>
           
           <Route path="/" element={<TodoContainer/>}/>
-         </Routes>
-        <Routes>
+          <Route path="/about"/>
           <Route path="/about/about-app" element={<AboutApp/>}/>
           <Route path="/about/about-author" element={<AboutAuthor/>}/>
-        </Routes>
-       
+          <Route path='*' element={<NotFound/>}/>
+          
+         </Routes>
+      
       
        
         
