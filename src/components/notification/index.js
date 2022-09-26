@@ -7,13 +7,7 @@ export const emitter = new EventEmitter();
 const Notification = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState();
-  const notificationStyle = {
-    padding: 10,
-    border: "1px white solid",
-    marginBottom: 15,
-    backgroundColor: "aqua",
-    borderRadius: 2,
-  };
+ 
   const reset = () => {
     setOpen(false);
   };
@@ -30,7 +24,7 @@ const Notification = () => {
     return null;
   }
   return (
-    <div style={notificationStyle} >
+    <div className="p-4 border-1 mb-4 rounded-md font-semibold " >
       <span>{message}</span>
     </div>
   );

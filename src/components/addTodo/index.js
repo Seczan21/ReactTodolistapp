@@ -11,7 +11,7 @@ const  AddTodo = ({addTodo}) => {
             done: false,
           };
         addTodo(newTodo);  
-        emitter.emit("NOTIFICATION",<p className='text-2xl font-semibold text-black '>Data Sukses ditambahkan!</p>)
+        emitter.emit("NOTIFICATION",<p className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-2xl'>Data Sukses ditambahkan!</p>)
         console.log(newTodo);
         setTitle("");
     }

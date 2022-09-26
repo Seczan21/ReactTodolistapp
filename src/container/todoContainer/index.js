@@ -42,7 +42,7 @@ const TodoContainer = () => {
     
     <div style={{ margin: 0 }}>
      
-      <h4 align="center" className="font-bold text-4xl text-green-400">todos</h4>
+      <h1 align="center" className=" mt-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-5xl font-bold">Todos</h1>
      <Notification/>
       <AddTodo addTodo={handleAddTodo} />
 

@@ -14,10 +14,10 @@ const RouterJs = () => {
         </section>
         <section>
             <div className="grid grid-cols-12 ">
-                <div className="col-span-2 bg-black h-screen pl-2 md:col-span-2 ">
+                <div className="col-span-2  h-screen pl-2 md:col-span-2 border-r-2 border-slate-400">
                     <Sidebar/>
                 </div>
-                <div className="col-span-10 bg-slate-100 h-screen pl-2 md:col-span-10 ">   
+                <div className="col-span-10 h-screen pl-2 md:col-span-10 ">   
                     <NavPage/>
                 </div>
             </div>
