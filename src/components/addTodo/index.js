@@ -16,11 +16,12 @@ const  AddTodo = ({addTodo}) => {
         setTitle("");
     }
   return (
-    <div style={{margin:"50px",display:"block"}}    align="center">
-        <form action="" onSubmit={handleSubmit}>
-            <input type="text" className="bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500  w-full rounded-full sm:text-sm focus:ring-1" value={title} onChange={(e)=> setTitle(e.target.value)} placeholder="Add todo..."  style={{width:"90%",padding:10}} required/>
-            <input type="submit" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-full text-white" style={{width:80,padding:10}}/>
-        </form>
+    <div style={{margin:"50px",display:"block"}}    align="center" className='relative block'>
+      <form action="" onSubmit={handleSubmit}>
+        <input type="text" id="text" className="block p-4 pl-10 w-full bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500  w-full rounded-full sm:text-sm focus:ring-1" value={title} onChange={(e)=> setTitle(e.target.value)} placeholder="Add todo..."  required/>
+        <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+      </form>
     </div>
   )
 }
